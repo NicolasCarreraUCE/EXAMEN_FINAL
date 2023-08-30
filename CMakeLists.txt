@@ -12,6 +12,9 @@ FetchContent_Declare(fmt
 )
 FetchContent_MakeAvailable(fmt)
 
+### MPI
+find_package(MPI REQUIRED)
+
 add_executable(EXAMEN_FINAL main.cpp)
 
-target_link_libraries(EXAMEN_FINAL fmt::fmt)
+target_link_libraries(EXAMEN_FINAL fmt::fmt MPI::MPI_CXX)
